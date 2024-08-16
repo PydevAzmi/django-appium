@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from . import forms
+from django.contrib.auth import authenticate , login
+from django.urls import reverse
 
 def register(request):
     if request.method == 'POST':
@@ -13,10 +15,10 @@ def register(request):
 
 def update_user_data(request):
     if request.method == 'POST':
-        form = forms.UserForm(request.POST)
+        form = forms.UserEditForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            return redirect('login')
+            return redirect('account')
     else:
-        form = forms.UserForm()
+        form = forms.UserEditForm(instance=request.user)
     return render(request, 'registration/account.html', {'form': form})

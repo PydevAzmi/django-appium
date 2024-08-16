@@ -1,0 +1,188 @@
+{% load static %}
+{% load django_bootstrap5 %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Appix |
+  {% block title %}
+    
+  {% endblock title %}
+    </title>
+
+  <!-- icofont-css-link -->
+  <link rel="stylesheet" href="{% static 'css/icofont.min.css' %}">
+  <!-- Owl-Carosal-Style-link -->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <!-- Bootstrap-Style-link -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- Aos-Style-link -->
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <!-- Coustome-Style-link -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Responsive-Style-link -->
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
+
+  <!-- Header Start -->
+  <header>
+    <!-- container start -->
+    <div class="container">
+      <!-- navigation bar -->
+      <nav class="navbar navbar-expand-lg" >
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'img/logo.png' %}" alt="Logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Apps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tests</a>
+            </li>
+
+            <li class="nav-item">
+              <div class="btn_block">
+                {% if user.is_authenticated %}
+                <a class="nav-link dark_btn" href="{% url 'account' %}">Profile</a>
+                {% else %}
+               
+                <a class="nav-link dark_btn" href="{% url 'login' %}">Login</a>
+                {% endif %}
+                <div class="btn_bottom"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- navigation end -->
+    </div>
+    <!-- container end -->
+  </header>
+  
+  {% block body %}
+    
+  {% endblock body %}
+    <!-- Footer-Section start -->
+    <footer class="white_text" data-aos="fade-in" data-aos-duration="1500">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo_side">
+              <div class="logo">
+                <a href="#">
+                  <img src="{% static 'images/ft_logo.png' %}" alt="Logo">
+                </a>
+              </div>
+              <div class="news_letter">
+                <h3>Subscribe newsletter</h3>
+                <p>Be the first to recieve all latest post in your inbox</p>
+                <form method="post">
+                  <div class="form">
+                    {% csrf_token %}
+                    {%bootstrap_form subscribe_form %}
+                    {% bootstrap_button type='submit' class="btn" content="send" %}
+                    
+                  </div>
+                  <p class="note">By clicking send link you agree to receive message.</p>
+                </form>
+              </div>
+              <ul class="contact_info">
+                <li><a href="mailto:pydevazmi@gmail.com">pydevazmi@gmail.com</a></li>
+                <li><a href="tel:+201126732635 ">+20 112 6732 635</a></li>
+              </ul>
+              <ul class="social_media">
+                <li><a href="https://web.facebook.com/MuhmdAzmii"><i class="icofont-facebook"></i></a></li>
+                <li><a href="https://x.com/MuhmdAzmii"><i class="icofont-twitter"></i></a></li>
+                <li><a href="https://github.com/pydevazmi"><i class="icofont-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/muhmdazmii/"><i class="icofont-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="download_side">
+              {% comment %}
+              <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                <select name="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                  {% endcomment %}
+                </select>
+                {% bootstrap_button type='submit' class="btn btn-lg btn-primary" content="GO" %}
+              </form>
+            </div>
+          </div>
+      </div>
+      </div>
+    </footer>
+    <!-- Footer-Section end -->
+
+    <!-- go top button -->
+    <div class="go_top" id="Gotop">
+      <span><i class="icofont-arrow-up"></i></span>
+    </div>
+
+    <!-- Video Model Start -->
+    <div class="modal fade youtube-video" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button id="close-video" type="button" class="button btn btn-default text-right" data-dismiss="modal">
+            <i class="icofont-close-line-circled"></i>
+          </button>
+          <div class="modal-body">
+            <div id="video-container" class="video-container">
+              <iframe id="youtubevideo" width="640" height="360" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video Model End -->
+  </div>
+  <!-- Page-wrapper-End -->
+
+
+
+  <!-- Jquery-js-Link -->
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <!-- owl-js-Link -->
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <!-- bootstrap-js-Link -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- aos-js-Link -->
+  <script src="{% static 'js/aos.js' %}"></script>
+  <!-- Typed Js Cdn -->
+  <script src="{% static 'js/typed.min.js' %}"></script>
+  <!-- main-js-Link -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
