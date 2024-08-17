@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from . import forms
-from django.contrib.auth import authenticate , login
-from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 def register(request):
     if request.method == 'POST':
@@ -13,6 +12,7 @@ def register(request):
         form = forms.SignupForm()
     return render(request, 'registration/register.html', {'form': form})
 
+@login_required
 def update_user_data(request):
     if request.method == 'POST':
         form = forms.UserEditForm(request.POST, instance=request.user)

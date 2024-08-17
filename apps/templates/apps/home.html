@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}
-    Home
+    {% trans 'Home' %}
 {% endblock title %}
     
 
@@ -23,11 +24,11 @@
               </span>
             </div>
             <!-- h1 -->
-            <h1>Lead generation <span>mobile
+            <h1>{% trans 'Lead generation' %} <span>mobile
                 app Automated Testing</span></h1>
             <!-- p -->
             <p>
-              Software testing is critical in ensuring any application’s success in the digital world.
+              {% trans 'Software testing is critical in ensuring any application’s success in the digital world.' %}
             </p>
           </div>
 
@@ -35,7 +36,7 @@
           <div class="used_app">
             <ul>
                 <div class="btn_block" data-aos="fade-up" data-aos-duration="1500">
-                    <a href="#" class="btn puprple_btn ml-0">Test Your Apps Now</a>
+                    <a href="{% url 'apps' %}" class="btn puprple_btn ml-0">{% trans 'Test Your Apps Now' %}</a>
                     <div class="btn_bottom"></div>
                 </div>
             </ul>
@@ -235,7 +236,7 @@
           </div>
           <div class="text-center">
             <div class="btn_block">
-              <a href="{% url 'login' %}" class="btn puprple_btn ml-0">Get started now</a>
+              <a href="{% url 'login' %}" class="btn puprple_btn ml-0">{% trans 'Get started now' %}</a>
               <div class="btn_bottom"></div>
             </div>
           </div>

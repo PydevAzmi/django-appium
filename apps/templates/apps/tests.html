@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+    {% trans 'My Tests' %}
+{% endblock title %}
+
+
+{% block body %}
+    <!-- Recent Articles Section Start -->
+    <section class="articles_section row_am">
+        <div class="container">
+          <div class="section_title" data-aos="fade" data-aos-duration="1500">
+            <h2> {% trans 'My' %}  <span>{% trans 'Apps Test' %}</span></h2>
+          </div>
+          <ul class="filter_tags" data-aos="fade-up" data-aos-duration="1500">
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">{% trans 'Android' %}</a></li>
+            <li><a href="#">{% trans 'iOS' %}</a></li>
+            <li><a href="#">{% trans 'Other' %}</a></li>
+          </ul>
+          {% for app in apptest_list %}
+          <div class="blog_listings">
+            <div class="listing_block" data-aos="fade-up" data-aos-duration="1500">
+              <a href="" class="img" width="320" height="350">
+                <img src='{{app.logo.url}}'  alt="image">
+              </a>
+              <div class="blog_text">
+                <span class="tag">{{app.platform}}</span>
+                <h2><a href="#">{{app.name}}</a></h2>
+                <h6>{{app.description|truncatewords:6}}</h6>
+                <a href="#">{% trans 'Read more' %} <i class="icofont-arrow-right"></i></a>
+              </div>
+              <div class="authore_info">
+                <ul class="blog_info">
+                  <li>{{app.updated_at}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+          {% if is_paginated %}
+          <div class="pagination_block" data-aos="fade-in" data-aos-duration="1500">
+            <ul>
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="prev"><i class="icofont-arrow-left"></i>Prev</a></li>
+                {% endif %}
+                
+                {% for i in paginator.page_range %}
+                    {% if page_obj.number == i  %} 
+                        {% if page_obj.has_previous and page_obj.previous_page_number > 1  %}
+                            <li><a href="?page={{i|add:'-2'}}">{{i|add:"-2"}}</a></li>
+                            <li><a href="?page={{i|add:'-1'}}">{{i|add:"-1"}}</a></li>
+                        {% endif %}
+                        <li><a href="#" class="active">{{i}}</a></li>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="next">Next <i class="icofont-arrow-right"></i></a></li>
+                {% endif %}
+            </ul>
+          {% endif %}
+          <!-- Pagination -->
+          
+        </div>
+      </section>
+      <!-- Recent Articles Section End -->
+  
+{% endblock body %}
+    
+
+    
+
