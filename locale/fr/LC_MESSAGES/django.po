@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-18 09:35+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\apps\models.py:7 .\apps\templates\apps\apps.html:18
+#: .\apps\templates\apps\tests.html:18
+msgid "Android"
+msgstr ""
+
+#: .\apps\models.py:8 .\apps\templates\apps\apps.html:19
+#: .\apps\templates\apps\tests.html:19
+msgid "iOS"
+msgstr ""
+
+#: .\apps\models.py:9 .\apps\templates\apps\apps.html:20
+#: .\apps\templates\apps\tests.html:20
+msgid "Other"
+msgstr ""
+
+#: .\apps\models.py:21
+msgid "Name"
+msgstr ""
+
+#: .\apps\models.py:22
+msgid "Description"
+msgstr ""
+
+#: .\apps\models.py:23
+msgid "Logo"
+msgstr ""
+
+#: .\apps\models.py:24
+msgid "Owner"
+msgstr ""
+
+#: .\apps\models.py:25
+msgid "APK File"
+msgstr ""
+
+#: .\apps\models.py:26
+msgid "Platforrm"
+msgstr ""
+
+#: .\apps\models.py:27
+msgid "Time Updated At"
+msgstr ""
+
+#: .\apps\models.py:35
+msgid "Test Title"
+msgstr ""
+
+#: .\apps\models.py:36
+msgid "Test"
+msgstr ""
+
+#: .\apps\models.py:37
+msgid "Time Tested At"
+msgstr ""
+
+#: .\apps\models.py:38
+msgid "screen 1"
+msgstr ""
+
+#: .\apps\models.py:39
+msgid "screen 2"
+msgstr ""
+
+#: .\apps\models.py:40
+msgid "video"
+msgstr ""
+
+#: .\apps\models.py:41
+msgid "Ui Hierarchy"
+msgstr ""
+
+#: .\apps\models.py:42
+msgid "Screen Changed"
+msgstr ""
+
+#: .\apps\models.py:48
+msgid "User"
+msgstr ""
+
+#: .\apps\models.py:49
+msgid "Email"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:5
+msgid "My Apps"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:14 .\apps\templates\apps\tests.html:14
+msgid "My"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:14
+msgid "Apps"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:17
+msgid "All"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:32 .\apps\templates\apps\tests.html:32
+msgid "Read more"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:50
+msgid "Prev"
+msgstr ""
+
+#: .\apps\templates\apps\apps.html:64
+msgid "Next"
+msgstr ""
+
+#: .\apps\templates\apps\home.html:5
+msgid "Home"
+msgstr ""
+
+#: .\apps\templates\apps\home.html:27
+msgid "Lead generation"
+msgstr ""
+
+#: .\apps\templates\apps\home.html:31
+msgid ""
+"Software testing is critical in ensuring any application’s success in the "
+"digital world."
+msgstr ""
+
+#: .\apps\templates\apps\home.html:39
+msgid "Test Your Apps Now"
+msgstr ""
+
+#: .\apps\templates\apps\home.html:239
+msgid "Get started now"
+msgstr ""
+
+#: .\apps\templates\apps\tests.html:5
+msgid "My Tests"
+msgstr ""
+
+#: .\apps\templates\apps\tests.html:14
+msgid "Apps Test"
+msgstr ""
+
+#: .\project\settings.py:122
+msgid "Français"
+msgstr ""
+
+#: .\project\settings.py:123
+msgid "English"
+msgstr ""

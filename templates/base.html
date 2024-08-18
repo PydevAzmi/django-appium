@@ -1,5 +1,7 @@
 {% load static %}
 {% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
@@ -76,11 +78,19 @@
       <!-- navigation end -->
     </div>
     <!-- container end -->
+
   </header>
+  <div class="container">
+    {% if messages %}
+      {% bootstrap_messages %}
+    {% endif %}
+  </div>
+
   
   {% block body %}
     
   {% endblock body %}
+
     <!-- Footer-Section start -->
     <footer class="white_text" data-aos="fade-in" data-aos-duration="1500">
       <div class="container">
@@ -95,52 +105,52 @@
               <div class="news_letter">
                 <h3>Subscribe newsletter</h3>
                 <p>Be the first to recieve all latest post in your inbox</p>
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                   <div class="form">
                     {% csrf_token %}
                     {%bootstrap_form subscribe_form %}
-                    {% bootstrap_button type='submit' class="btn" content="send" %}
-                    
+                    {% bootstrap_button type='submit' class="btn" content="Subscribe" %}
                   </div>
-                  <p class="note">By clicking send link you agree to receive message.</p>
                 </form>
               </div>
-              <ul class="contact_info">
-                <li><a href="mailto:pydevazmi@gmail.com">pydevazmi@gmail.com</a></li>
-                <li><a href="tel:+201126732635 ">+20 112 6732 635</a></li>
-              </ul>
-              <ul class="social_media">
-                <li><a href="https://web.facebook.com/MuhmdAzmii"><i class="icofont-facebook"></i></a></li>
-                <li><a href="https://x.com/MuhmdAzmii"><i class="icofont-twitter"></i></a></li>
-                <li><a href="https://github.com/pydevazmi"><i class="icofont-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/muhmdazmii/"><i class="icofont-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="download_side">
-              {% comment %}
-              <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                <input name="next" type="hidden" value="{{ redirect_to }}">
-                <select name="language">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
+              <div class='row'>
+                <ul class="contact_info">
+                  <li><a href="mailto:pydevazmi@gmail.com">pydevazmi@gmail.com</a></li>
+                  <li><a href="tel:+201126732635 ">+20 112 6732 635</a></li>
+                </ul>
+                <ul class="social_media">
+                  <li><a href="https://web.facebook.com/MuhmdAzmii"><i class="icofont-facebook"></i></a></li>
+                  <li><a href="https://x.com/MuhmdAzmii"><i class="icofont-twitter"></i></a></li>
+                  <li><a href="https://github.com/pydevazmi"><i class="icofont-github"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/muhmdazmii/"><i class="icofont-linkedin"></i></a></li>
+                </ul>
+                {% get_current_language as CURRENT_LANGUAGE %}
+                {% get_available_languages as AVAILABLE_LANGUAGES %}
+                {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+                <div class="">
+                  <br>
+                  <ul class="contact_info">
+                  <p>{% trans "Language" %}:</p>
                     {% for language in languages %}
-                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                            {{ language.name_local }} ({{ language.code }})
-                        </option>
+                      <li>
+                        <a href="/{{ language.code }}/"
+                          {% if language.code == CURRENT_LANGUAGE %} class="active"{% endif %}>
+                          &ensp;{{ language.name_local }}
+                        </a>
+                      </li>
                     {% endfor %}
-                  {% endcomment %}
-                </select>
-                {% bootstrap_button type='submit' class="btn btn-lg btn-primary" content="GO" %}
-              </form>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-      </div>
+
+        </div>
       </div>
     </footer>
     <!-- Footer-Section end -->
+
+
 
     <!-- go top button -->
     <div class="go_top" id="Gotop">
@@ -167,8 +177,6 @@
     <!-- Video Model End -->
   </div>
   <!-- Page-wrapper-End -->
-
-
 
   <!-- Jquery-js-Link -->
   <script src="{% static 'js/jquery.js' %}"></script>

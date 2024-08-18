@@ -43,3 +43,9 @@ class AppTest(models.Model):
 
     def __str__(self):
         return f'{self.test_title}'
+    
+class SubscripedEmail(models.Model):
+    user = models.ForeignKey(User, verbose_name=_("User"), on_delete=models.CASCADE)
+    email = models.EmailField(_("Email"), max_length=254)
+    def __str__(self):
+        return f'{self.email}'

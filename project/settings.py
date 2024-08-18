@@ -10,7 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from pathlib import Path
-
+from django.utils.translation import gettext_lazy as _
+import os
 # Initialise environment variables
 import environ
 env = environ.Env()
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "django_bootstrap5",
+    "rosetta",
 
     'apps',
 ]
@@ -116,6 +118,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
+
+LANGUAGES = [
+    ("fr", _("Français")),
+    ('en', _('English')),
+]
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -124,6 +132,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+USE_L10N = True
+
+LOCALE_PATH = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -142,16 +155,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-from django.utils.translation import gettext_lazy as _
 
-LANGUAGES = [
-    ("fr", "Français"),
-    ('en', _('English')),
-]
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-LOCALE_PATHS = BASE_DIR / 'locale/'
