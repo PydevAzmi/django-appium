@@ -9,8 +9,8 @@ class SignupForm(UserCreationForm):
         fields = ['username','email', 'password1', 'password2']
 
 class UserEditForm(UserChangeForm):
-    password = forms.CharField( widget=forms.TextInput(attrs={'readonly':'readonly', 'value':'*******'}))
-    username =forms.CharField( widget=forms.TextInput(attrs={'readonly':'readonly'}))
+    password = forms.CharField(required=False, widget=forms.TextInput(attrs={'readonly':'readonly', 'value':'*******'}))
+    username =forms.CharField(required=False, widget=forms.TextInput(attrs={'readonly':'readonly'}))
     class Meta:
         model = User 
         fields = ['username','first_name' , 'last_name', 'email']

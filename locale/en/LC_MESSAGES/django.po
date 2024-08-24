@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 09:35+0300\n"
-"PO-Revision-Date: 2024-08-18 09:44+0000\n"
-"Last-Translator:   <pydevazmi@gmail.com>\n"
+"POT-Creation-Date: 2024-08-24 17:01+0000\n"
+"PO-Revision-Date: 2024-08-24 16:48+0000\n"
+"Last-Translator: Mohamed Azmi <pydevazmi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,187 +19,523 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\apps\models.py:7 .\apps\templates\apps\apps.html:18
-#: .\apps\templates\apps\tests.html:18
-#, fuzzy
-msgid "Android"
-msgstr ""
+#: accounts/templates/registration/account.html:9
+msgid "My Profile"
+msgstr "My Profile"
 
-#: .\apps\models.py:8 .\apps\templates\apps\apps.html:19
-#: .\apps\templates\apps\tests.html:19
-#, fuzzy
-msgid "iOS"
-msgstr ""
+#: accounts/templates/registration/account.html:17
+msgid "Update Profile"
+msgstr "Update Profile"
 
-#: .\apps\models.py:9 .\apps\templates\apps\apps.html:20
-#: .\apps\templates\apps\tests.html:20
-#, fuzzy
-msgid "Other"
-msgstr ""
+#: accounts/templates/registration/account.html:20
+#: accounts/templates/registration/logged_out.html:9
+msgid "Logout"
+msgstr "Logout"
 
-#: .\apps\models.py:21
-#, fuzzy
-msgid "Name"
-msgstr ""
+#: accounts/templates/registration/account.html:29
+msgid "Change password"
+msgstr "Change password"
 
-#: .\apps\models.py:22
-#, fuzzy
-msgid "Description"
-msgstr ""
+#: accounts/templates/registration/account.html:32
+#: apps/templates/apps/app_detail.html:94
+#: apps/templates/apps/test_detail.html:72
+msgid "Save"
+msgstr "Save"
 
-#: .\apps\models.py:23
-#, fuzzy
-msgid "Logo"
-msgstr ""
+#: accounts/templates/registration/logged_out.html:25
+msgid "Good Bye,"
+msgstr "Good Bye,"
 
-#: .\apps\models.py:24
-#, fuzzy
-msgid "Owner"
-msgstr ""
-
-#: .\apps\models.py:25
-#, fuzzy
-msgid "APK File"
-msgstr ""
-
-#: .\apps\models.py:26
-#, fuzzy
-msgid "Platforrm"
-msgstr ""
-
-#: .\apps\models.py:27
-#, fuzzy
-msgid "Time Updated At"
-msgstr ""
-
-#: .\apps\models.py:35
-#, fuzzy
-msgid "Test Title"
-msgstr ""
-
-#: .\apps\models.py:36
-#, fuzzy
-msgid "Test"
-msgstr ""
-
-#: .\apps\models.py:37
-#, fuzzy
-msgid "Time Tested At"
-msgstr ""
-
-#: .\apps\models.py:38
-#, fuzzy
-msgid "screen 1"
-msgstr ""
-
-#: .\apps\models.py:39
-#, fuzzy
-msgid "screen 2"
-msgstr ""
-
-#: .\apps\models.py:40
-#, fuzzy
-msgid "video"
-msgstr ""
-
-#: .\apps\models.py:41
-#, fuzzy
-msgid "Ui Hierarchy"
-msgstr ""
-
-#: .\apps\models.py:42
-#, fuzzy
-msgid "Screen Changed"
-msgstr ""
-
-#: .\apps\models.py:48
-#, fuzzy
-msgid "User"
-msgstr ""
-
-#: .\apps\models.py:49
-#, fuzzy
-msgid "Email"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:5
-#, fuzzy
-msgid "My Apps"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:14 .\apps\templates\apps\tests.html:14
-#, fuzzy
-msgid "My"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:14
-#, fuzzy
-msgid "Apps"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:17
-#, fuzzy
-msgid "All"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:32 .\apps\templates\apps\tests.html:32
-#, fuzzy
-msgid "Read more"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:50
-#, fuzzy
-msgid "Prev"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:64
-#, fuzzy
-msgid "Next"
-msgstr ""
-
-#: .\apps\templates\apps\home.html:5
-#, fuzzy
+#: accounts/templates/registration/logged_out.html:28
+#: apps/templates/apps/home.html:8 templates/base.html:55
 msgid "Home"
+msgstr "Home"
+
+#: accounts/templates/registration/login.html:12
+#: accounts/templates/registration/login.html:49
+#: accounts/templates/registration/register.html:31 templates/base.html:70
+msgid "Login"
+msgstr "Login"
+
+#: accounts/templates/registration/login.html:28
+#: accounts/templates/registration/register.html:25
+msgid "Welcome"
+msgstr "Welcome"
+
+#: accounts/templates/registration/login.html:29
+#: accounts/templates/registration/password_change_form.html:25
+msgid "let's get started!"
+msgstr "let's get started!"
+
+#: accounts/templates/registration/login.html:32
+msgid "Please use your credentials to login."
+msgstr "Please use your credentials to login."
+
+#: accounts/templates/registration/login.html:34
+msgid "  If you are not a member, please"
+msgstr "If you are not a member, please"
+
+#: accounts/templates/registration/login.html:35
+#: accounts/templates/registration/password_reset_form.html:30
+msgid "register"
+msgstr "register"
+
+#: accounts/templates/registration/login.html:46
+#: accounts/templates/registration/password_change_form.html:33
+msgid "Forget Password"
+msgstr "Forget Password"
+
+#: accounts/templates/registration/password_change_done.html:8
+msgid "Password Change Done"
+msgstr "Password Change Done"
+
+#: accounts/templates/registration/password_change_done.html:22
+msgid "Password Change done"
+msgstr "Password Change done"
+
+#: accounts/templates/registration/password_change_done.html:25
+msgid "Your password has been changed successfully"
+msgstr "Your password has been changed successfully"
+
+#: accounts/templates/registration/password_change_done.html:27
+#: accounts/templates/registration/password_reset_complete.html:29
+#: accounts/templates/registration/password_reset_done.html:29
+msgid "Back"
+msgstr "Back"
+
+#: accounts/templates/registration/password_change_form.html:8
+msgid "Password Change"
+msgstr "Password Change"
+
+#: accounts/templates/registration/password_change_form.html:24
+#: accounts/templates/registration/password_change_form.html:36
+msgid "Change Password"
+msgstr "Change Password"
+
+#: accounts/templates/registration/password_reset_complete.html:8
+msgid "Password Change Complete"
+msgstr "Password Change Complete"
+
+#: accounts/templates/registration/password_reset_complete.html:24
+msgid "Password Reset Completed"
+msgstr "Password Reset Completed"
+
+#: accounts/templates/registration/password_reset_complete.html:27
+msgid "Your password has been Reseted successfully"
+msgstr "Your password has been Reseted successfully"
+
+#: accounts/templates/registration/password_reset_confirm.html:8
+msgid "Password Reset Confirm"
+msgstr "Password Reset Confirm"
+
+#: accounts/templates/registration/password_reset_confirm.html:24
+#: accounts/templates/registration/password_reset_form.html:8
+msgid "Password Reset"
+msgstr "Password Reset"
+
+#: accounts/templates/registration/password_reset_confirm.html:25
+#: accounts/templates/registration/password_reset_form.html:25
+#: accounts/templates/registration/register.html:26
+msgid "let's get started"
+msgstr "let's get started"
+
+#: accounts/templates/registration/password_reset_confirm.html:31
+#: accounts/templates/registration/password_reset_form.html:38
+msgid "Reset"
+msgstr "Reset"
+
+#: accounts/templates/registration/password_reset_done.html:8
+msgid "Password Reset Done"
+msgstr "Password Reset Done"
+
+#: accounts/templates/registration/password_reset_done.html:24
+msgid "Password Reset Email Sent"
+msgstr "Password Reset Email Sent"
+
+#: accounts/templates/registration/password_reset_done.html:27
+msgid "Please check your inbox"
+msgstr "Please check your inbox"
+
+#: accounts/templates/registration/password_reset_form.html:24
+msgid "Reset My Password"
+msgstr "Reset My Password"
+
+#: accounts/templates/registration/password_reset_form.html:29
+msgid " If you are not a member, please"
+msgstr "If you are not a member, please"
+
+#: accounts/templates/registration/register.html:9
+#: accounts/templates/registration/register.html:39
+msgid "Signup"
+msgstr "Signup"
+
+#: accounts/templates/registration/register.html:30
+msgid "If you already have account"
+msgstr "If you already have account"
+
+#: accounts/views.py:22
+msgid "User data updated"
+msgstr "User data updated"
+
+#: apps/context_processor.py:11
+msgid "You need to login first"
+msgstr "You need to login first"
+
+#: apps/context_processor.py:20
+msgid "You have been subscribed in newsletter"
+msgstr "You have been subscribed in newsletter"
+
+#: apps/context_processor.py:22
+msgid "You Are Already subscribed!"
+msgstr "You Are Already subscribed!"
+
+#: apps/forms.py:53
+msgid "Paltform Name"
+msgstr "Paltform Name"
+
+#: apps/forms.py:53 apps/models.py:8 apps/templates/apps/apps.html:22
+#: apps/templates/apps/tests.html:19
+msgid "Android"
+msgstr "Android"
+
+#: apps/forms.py:54
+msgid "Automation Name"
 msgstr ""
 
-#: .\apps\templates\apps\home.html:27
-#, fuzzy
+#: apps/forms.py:55
+msgid "Paltform Version"
+msgstr ""
+
+#: apps/forms.py:56
+msgid "Device Name"
+msgstr ""
+
+#: apps/forms.py:57 templates/base.html:135
+msgid "Language"
+msgstr "Language"
+
+#: apps/forms.py:58
+msgid "Locale"
+msgstr ""
+
+#: apps/forms.py:59
+msgid "First Button XPath"
+msgstr ""
+
+#: apps/models.py:9 apps/templates/apps/apps.html:23
+#: apps/templates/apps/tests.html:20
+msgid "iOS"
+msgstr "iOS"
+
+#: apps/models.py:10 apps/templates/apps/apps.html:24
+#: apps/templates/apps/tests.html:21
+msgid "Other"
+msgstr "Other"
+
+#: apps/models.py:22
+msgid "Name"
+msgstr "Name"
+
+#: apps/models.py:23
+msgid "Description"
+msgstr "Description"
+
+#: apps/models.py:24
+msgid "Banner"
+msgstr "Banner"
+
+#: apps/models.py:25
+msgid "Owner"
+msgstr "Owner"
+
+#: apps/models.py:26
+msgid "APK File"
+msgstr "APK File"
+
+#: apps/models.py:27
+msgid "Platforrm"
+msgstr "Platform"
+
+#: apps/models.py:28
+msgid "Time Updated At"
+msgstr "Time Updated At"
+
+#: apps/models.py:43
+msgid "Test Title"
+msgstr "Test Title"
+
+#: apps/models.py:44
+msgid "Test"
+msgstr "Test"
+
+#: apps/models.py:45
+msgid "Time Tested At"
+msgstr "Time Tested At"
+
+#: apps/models.py:46
+msgid "screen 1"
+msgstr "screen 1"
+
+#: apps/models.py:47
+msgid "screen 2"
+msgstr "screen 2"
+
+#: apps/models.py:48
+msgid "video"
+msgstr "video"
+
+#: apps/models.py:49
+msgid "Ui Hierarchy"
+msgstr "Ui Hierarchy"
+
+#: apps/models.py:50
+msgid "Screen Changed"
+msgstr "Screen Changed"
+
+#: apps/models.py:62
+msgid "User"
+msgstr "User"
+
+#: apps/models.py:63
+msgid "Email"
+msgstr "Email"
+
+#: apps/templates/apps/app_detail.html:8
+msgid "App Details"
+msgstr "App Details"
+
+#: apps/templates/apps/app_detail.html:43
+msgid "Test Your App With Appium"
+msgstr "Test Your App With Appium"
+
+#: apps/templates/apps/app_detail.html:45
+msgid ""
+"“ Appium is an open-source project and ecosystem of related software, "
+"designed to facilitate UI automation of many app platforms, including mobile "
+"(iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, "
+"Windows), TV (Roku, tvOS, Android TV, Samsung), and more! ”"
+msgstr ""
+"“ Appium is an open-source project and ecosystem of related software, "
+"designed to facilitate UI automation of many app platforms, including mobile "
+"(iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, "
+"Windows), TV (Roku, tvOS, Android TV, Samsung), and more! ”"
+
+#: apps/templates/apps/app_detail.html:56
+msgid "Run Appium Test"
+msgstr "Run Appium Test"
+
+#: apps/templates/apps/app_detail.html:71
+msgid "Edit App"
+msgstr "Edit App"
+
+#: apps/templates/apps/app_detail.html:77
+#: apps/templates/apps/test_detail.html:59
+msgid "Delete"
+msgstr "Delete"
+
+#: apps/templates/apps/apps.html:8
+msgid "My Apps"
+msgstr "My Apps"
+
+#: apps/templates/apps/apps.html:17 apps/templates/apps/tests.html:14
+msgid "My"
+msgstr "My"
+
+#: apps/templates/apps/apps.html:17 templates/base.html:58
+msgid "Apps"
+msgstr "Apps"
+
+#: apps/templates/apps/apps.html:21 apps/templates/apps/tests.html:18
+msgid "All"
+msgstr "All"
+
+#: apps/templates/apps/apps.html:36 apps/templates/apps/tests.html:33
+msgid "Read more"
+msgstr "Read more"
+
+#: apps/templates/apps/apps.html:49
+msgid "You don't upload any apps yet."
+msgstr "You don't upload any apps yet."
+
+#: apps/templates/apps/apps.html:59
+msgid "Prev"
+msgstr "Prev"
+
+#: apps/templates/apps/apps.html:73
+msgid "Next"
+msgstr "Next"
+
+#: apps/templates/apps/apps.html:89
+msgid "Upload App"
+msgstr "Upload App"
+
+#: apps/templates/apps/apps.html:90
+msgid "Fill up form below"
+msgstr "Fill up form below"
+
+#: apps/templates/apps/apps.html:102
+msgid "Add"
+msgstr "Add"
+
+#: apps/templates/apps/home.html:28
 msgid "Lead generation"
-msgstr ""
+msgstr "Lead generation"
 
-#: .\apps\templates\apps\home.html:31
-#, fuzzy
+#: apps/templates/apps/home.html:29
+msgid ""
+"\n"
+"              <span>mobile app testing platform </span>\n"
+"              "
+msgstr ""
+"\n"
+"<span>mobile app testing platform </span>"
+
+#: apps/templates/apps/home.html:35
 msgid ""
 "Software testing is critical in ensuring any application’s success in the "
 "digital world."
 msgstr ""
+"Software testing is critical in ensuring any application’s success in the "
+"digital world."
 
-#: .\apps\templates\apps\home.html:39
-#, fuzzy
+#: apps/templates/apps/home.html:43
 msgid "Test Your Apps Now"
-msgstr ""
+msgstr "Test Your Apps Now"
 
-#: .\apps\templates\apps\home.html:239
-#, fuzzy
+#: apps/templates/apps/home.html:112
+msgid "About us"
+msgstr "About us"
+
+#: apps/templates/apps/home.html:113
+msgid "Application with the best "
+msgstr "Application with the best"
+
+#: apps/templates/apps/home.html:113
+msgid " user"
+msgstr "user"
+
+#: apps/templates/apps/home.html:114
+msgid " interface convert"
+msgstr "interface convert"
+
+#: apps/templates/apps/home.html:114
+msgid "visitor"
+msgstr "visitor"
+
+#: apps/templates/apps/home.html:114
+msgid "into"
+msgstr "into"
+
+#: apps/templates/apps/home.html:115
+msgid "leads"
+msgstr "leads"
+
+#: apps/templates/apps/home.html:126
+msgid ""
+"Perform manual and automated app testing with Appix in various screen and "
+"screenless devices across mobile Emulators to collect over 100+ performance "
+"experience KPIs."
+msgstr ""
+"Perform manual and automated app testing with Appix in various screen and "
+"screenless devices across mobile Emulators to collect over 100+ performance "
+"experience KPIs."
+
+#: apps/templates/apps/home.html:138
+msgid "START FOR FREE"
+msgstr "START FOR FREE"
+
+#: apps/templates/apps/home.html:153
+msgid "Quick & easy"
+msgstr "Quick & easy"
+
+#: apps/templates/apps/home.html:154
+msgid "How it works in 3 steps"
+msgstr "How it works in 3 steps"
+
+#: apps/templates/apps/home.html:164
+msgid "Create account"
+msgstr "Create account"
+
+#: apps/templates/apps/home.html:165
+msgid "Sign up free"
+msgstr "Sign up free"
+
+#: apps/templates/apps/home.html:178
+msgid "Upload app"
+msgstr "Upload app"
+
+#: apps/templates/apps/home.html:180
+msgid "Upload App. It will work for"
+msgstr "Upload App. It will work for"
+
+#: apps/templates/apps/home.html:180
+msgid " Android & iOS"
+msgstr "Android & iOS"
+
+#: apps/templates/apps/home.html:193
+msgid "Enjoy the test"
+msgstr "Enjoy the test"
+
+#: apps/templates/apps/home.html:195
+msgid "Enjoy testing your apps"
+msgstr "Enjoy testing your apps"
+
+#: apps/templates/apps/home.html:195
+msgid "most amazing test experience"
+msgstr "most amazing test experience"
+
+#: apps/templates/apps/home.html:204
 msgid "Get started now"
-msgstr ""
+msgstr "Get started now"
 
-#: .\apps\templates\apps\tests.html:5
-#, fuzzy
+#: apps/templates/apps/test_detail.html:8
+msgid "Test Details"
+msgstr "Test Details"
+
+#: apps/templates/apps/test_detail.html:53
+msgid "Edit"
+msgstr "Edit"
+
+#: apps/templates/apps/tests.html:5
 msgid "My Tests"
-msgstr ""
+msgstr "My Tests"
 
-#: .\apps\templates\apps\tests.html:14
-#, fuzzy
+#: apps/templates/apps/tests.html:14
 msgid "Apps Test"
-msgstr ""
+msgstr "Apps Test"
 
-#: .\project\settings.py:122
-#, fuzzy
+#: apps/templates/apps/tests.html:46
+msgid "You don't perform any tests yet."
+msgstr "You don't perform any tests yet."
+
+#: project/settings.py:125
 msgid "Français"
-msgstr ""
+msgstr "French"
 
-#: .\project\settings.py:123
-#, fuzzy
+#: project/settings.py:126
 msgid "English"
+msgstr "English"
+
+#: templates/auth_base.html:51
+msgid "Optimize End Users’ Digital Experiences"
+msgstr "Optimize End Users’ Digital Experiences"
+
+#: templates/base.html:61
+msgid "Tests"
+msgstr "Tests"
+
+#: templates/base.html:67
+msgid "Profile"
+msgstr "Profile"
+
+#: templates/base.html:106
+msgid ""
+"\n"
+"                <h3>Subscribe newsletter</h3>\n"
+"                <p>Be the first to recieve all latest post in your inbox</"
+"p>\n"
+"                "
 msgstr ""
+"\n"
+"<h3>Subscribe newsletter</h3>\n"
+"<p>Be the first to recieve all latest post in your inbox</p>"

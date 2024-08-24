@@ -1,4 +1,9 @@
 {% load static %}
+
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,6 +26,7 @@
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Template Base Styles End -->
 
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
@@ -41,12 +47,14 @@
               <div class="w-100 w-lg-75 w-xxl-50">
                 <div>
                   <div class="mb-5">
-                    <h1 class="display-3 text-white">Multiple Niches</h1>
-                    <h1 class="display-3 text-white">Ready for Your Project</h1>
+                    <h1 class="display-3 text-white">Appix</h1>
+                    <h1 class="display-3 text-white">{% trans 'Optimize End Users’ Digital Experiences' %}</h1>
                   </div>
                   <p class="h6 text-white lh-1-5 mb-5">
-                    Dynamically target high-payoff intellectual capital for customized technologies. Objectively integrate emerging core competencies before
-                    process-centric communities...
+                    Extensive end-to-end automation of QA process, 
+                    Comparative analysis of app performance against peers, 
+                    Continuous monitoring of app performance using synthetic data for higher availability of apps
+                    Easy-to-use developer friendly platform.
                   </p>
                 </div>
               </div>

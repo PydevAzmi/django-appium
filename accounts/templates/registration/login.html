@@ -1,8 +1,15 @@
 {% extends 'auth_base.html' %}
-{% load django_bootstrap5 %}    
 {% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+
+
+
+
 {% block title %}
-    Login
+    {% trans 'Login' %}
 {% endblock title %}
     
 {% block right_section %}
@@ -18,14 +25,14 @@
                       </div>    
                 </div>
             <div class="mb-5">
-                <h2 class="cta-1 mb-0 text-primary">Welcome,</h2>
-                <h2 class="cta-1 text-primary">let's get started!</h2>
+                <h2 class="cta-1 mb-0 text-primary">{% trans 'Welcome' %},</h2>
+                <h2 class="cta-1 text-primary">{% trans "let's get started!" %}</h2>
             </div>
             <div class="mb-5">
-                <p class="h6">Please use your credentials to login.</p>
+                <p class="h6">{% trans 'Please use your credentials to login.' %}</p>
                 <p class="h6">
-                If you are not a member, please
-                <a href="{% url 'register' %}">register</a>
+              {% trans '  If you are not a member, please' %}
+                <a href="{% url 'register' %}">{% trans 'register' %}</a>
                 .
                 </p>
             </div>
@@ -36,10 +43,11 @@
                     {% bootstrap_form form %}
                     <div class="mb-5">
                         <p class="h6">
-                        <a href="{% url 'password_reset' %}">Forget Password?</a>
+                        <a href="{% url 'password_reset' %}">{% trans 'Forget Password' %}?</a>
                         </p>
                     </div>
-                    {% bootstrap_button type='submit' class="btn btn-lg btn-primary" content="Login" %}
+                    {% trans "Login" as login_text %}
+                    {% bootstrap_button type="submit" class="btn btn-lg btn-primary" content=login_text %}
                 </form>				
             </div>
             </div>

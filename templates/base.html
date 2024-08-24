@@ -4,7 +4,7 @@
 {% bootstrap_javascript %}
 {% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -46,28 +46,28 @@
     <div class="container">
       <!-- navigation bar -->
       <nav class="navbar navbar-expand-lg" >
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'home' %}">
           <img src="{% static 'img/logo.png' %}" alt="Logo">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home</a>
+              <a class="nav-link" href="{% url 'home' %}">{% trans "Home" %}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'apps' %}">Apps</a>
+              <a class="nav-link" href="{% url 'apps' %}">{% trans "Apps" %}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'tests' %}">Tests</a>
+              <a class="nav-link" href="{% url 'tests' %}">{% trans "Tests" %}</a>
             </li>
 
             <li class="nav-item">
               <div class="btn_block">
                 {% if user.is_authenticated %}
-                <a class="nav-link dark_btn" href="{% url 'account' %}">Profile</a>
+                <a class="nav-link dark_btn" href="{% url 'account' %}">{% trans "Profile" %}</a>
                 {% else %}
                
-                <a class="nav-link dark_btn" href="{% url 'login' %}">Login</a>
+                <a class="nav-link dark_btn" href="{% url 'login' %}">{% trans "Login" %}</a>
                 {% endif %}
                 <div class="btn_bottom"></div>
               </div>
@@ -103,13 +103,15 @@
                 </a>
               </div>
               <div class="news_letter">
+                {% blocktrans %}
                 <h3>Subscribe newsletter</h3>
                 <p>Be the first to recieve all latest post in your inbox</p>
+                {% endblocktrans %}
                 <form method="post" enctype="multipart/form-data">
                   <div class="form">
                     {% csrf_token %}
                     {%bootstrap_form subscribe_form %}
-                    {% bootstrap_button type='submit' class="btn" content="Subscribe" %}
+                    {% bootstrap_button name='subscribe' type='submit' class="btn" content='Subscribe' %}
                   </div>
                 </form>
               </div>
@@ -190,7 +192,41 @@
   <script src="{% static 'js/typed.min.js' %}"></script>
   <!-- main-js-Link -->
   <script src="{% static 'js/main.js' %}"></script>
+  <script>
+    $("#typed").typed({
+      strings: ['Ship products faster with zero end-user issues', "Ensuring no downtime across your Apps",],
+      typeSpeed: 100,
+      startDelay: 0,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true,
+      cursorChar: "|",
+      contentType: 'html'
+    });
 
+    // Fixed Discount Dish JS
+    $(document).ready(function () {
+      let cardBlock = document.querySelectorAll('.task_block');
+      let topStyle = 120;
+
+      cardBlock.forEach((card) => {
+        card.style.top = `${topStyle}px`;
+        topStyle += 30;
+      })
+
+    }
+    );
+
+    // Scroll Down Window 
+    $(document).ready(function () {
+      // Attach a click event handler to the button
+      $('#scrollButton').click(function () {
+        // Scroll down smoothly 200 pixels from the current position
+        $('html, body').animate({ scrollTop: $(window).scrollTop() + 600 }, 1000); // Adjust the speed (800ms) as needed
+      });
+    });
+
+  </script>
 </body>
 
 </html>

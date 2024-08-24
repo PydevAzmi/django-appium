@@ -1,8 +1,12 @@
 {% extends 'auth_base.html' %}
-{% load django_bootstrap5 %}    
 {% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+
 {% block title %}
-    Signup
+    {% trans 'Signup' %}
 {% endblock title %}
     
 {% block right_section %}
@@ -18,13 +22,13 @@
                         </a>
                       </div>    
                 </div>
-                <h2 class="cta-1 mb-0 text-primary">Welcome,</h2>
-                <h2 class="cta-1 text-primary">let's get started!</h2>
+                <h2 class="cta-1 mb-0 text-primary">{% trans 'Welcome' %},</h2>
+                <h2 class="cta-1 text-primary">{% trans "let's get started" %}!</h2>
             </div>
             <div class="mb-5">
                 <p class="h6">
-                If you already have account?
-                <a href="{% url 'login' %}">login</a>
+                {% trans 'If you already have account' %}?
+                <a href="{% url 'login' %}">{% trans 'Login' %}</a>
                 .
                 </p>
             </div>
@@ -32,7 +36,8 @@
                 <form method="post" enctype="multipart/form-data" class="tooltip-end-bottom" novalidate>
                     {% csrf_token %}
                     {% bootstrap_form form %}
-                    {% bootstrap_button type='submit' class="btn btn-lg btn-primary" content="Signup" %}
+                    {% trans "Signup" as trans_text %}
+                    {% bootstrap_button type='submit' class="btn btn-lg btn-primary" content=trans_text %}
                 </form>				
             </div>
             </div>

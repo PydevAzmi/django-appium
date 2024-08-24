@@ -1,8 +1,12 @@
 {% extends 'auth_base.html' %}
-{% load django_bootstrap5 %}    
 {% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+
 {% block title %}
-    Logout
+    {% trans 'Logout' %}
 {% endblock title %}
     
 {% block right_section %}
@@ -12,30 +16,16 @@
             <div class="sw-lg-50 px-5">
                 <div class="sh-11">
                     <div class="sh-11">
-                        <a href="#">
+                        <a href="{% url 'home' %}">
                           <img src="{% static 'img/logo.png' %}" alt="Logo">
                         </a>
                       </div>    
                 </div>
             <div class="mb-5">
-                <h2 class="cta-1 mb-0 text-primary">Good Bye,</h2>
-                <h2 class="cta-1 mb-0 text">Logout</h2>
+                <h2 class="cta-1 mb-0 text-primary">{% trans 'Good Bye,' %}</h2>
             </div>
             <div class="mb-5">
-                <p class="h6">are you sure ?</p>
-                <p class="h6">
-                If you are not, please go
-                <a href="{% url 'home' %}">Back</a>
-                .
-                </p>
-            </div>
-            <div>
-                <form method="post" action="{{next}}" enctype="multipart/form-data" class="tooltip-end-bottom" novalidate>
-                    {% csrf_token %}
-                    {% bootstrap_button type='submit' class="btn btn-lg btn-primary" content="Logout" %}
-                    
-                </form>				
-            </div>
+                <a class="btn btn-lg puprple_btn" href="{% url 'home' %}"> {% trans 'Home' %}</a>
             </div>
         </div>
     </div>

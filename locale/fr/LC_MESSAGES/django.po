@@ -8,160 +8,536 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 09:35+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-08-24 17:01+0000\n"
+"PO-Revision-Date: 2024-08-24 16:47+0000\n"
+"Last-Translator: Mohamed Azmi <pydevazmi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\apps\models.py:7 .\apps\templates\apps\apps.html:18
-#: .\apps\templates\apps\tests.html:18
-msgid "Android"
-msgstr ""
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\apps\models.py:8 .\apps\templates\apps\apps.html:19
-#: .\apps\templates\apps\tests.html:19
-msgid "iOS"
-msgstr ""
+#: accounts/templates/registration/account.html:9
+msgid "My Profile"
+msgstr "Mon profil"
 
-#: .\apps\models.py:9 .\apps\templates\apps\apps.html:20
-#: .\apps\templates\apps\tests.html:20
-msgid "Other"
-msgstr ""
+#: accounts/templates/registration/account.html:17
+msgid "Update Profile"
+msgstr "Mettre à jour le profil"
 
-#: .\apps\models.py:21
-msgid "Name"
-msgstr ""
+#: accounts/templates/registration/account.html:20
+#: accounts/templates/registration/logged_out.html:9
+msgid "Logout"
+msgstr "Déconnexion"
 
-#: .\apps\models.py:22
-msgid "Description"
-msgstr ""
+#: accounts/templates/registration/account.html:29
+msgid "Change password"
+msgstr "Changer le mot de passe"
 
-#: .\apps\models.py:23
-msgid "Logo"
-msgstr ""
+#: accounts/templates/registration/account.html:32
+#: apps/templates/apps/app_detail.html:94
+#: apps/templates/apps/test_detail.html:72
+msgid "Save"
+msgstr "Sauvegarder"
 
-#: .\apps\models.py:24
-msgid "Owner"
-msgstr ""
+#: accounts/templates/registration/logged_out.html:25
+msgid "Good Bye,"
+msgstr "Au revoir,"
 
-#: .\apps\models.py:25
-msgid "APK File"
-msgstr ""
-
-#: .\apps\models.py:26
-msgid "Platforrm"
-msgstr ""
-
-#: .\apps\models.py:27
-msgid "Time Updated At"
-msgstr ""
-
-#: .\apps\models.py:35
-msgid "Test Title"
-msgstr ""
-
-#: .\apps\models.py:36
-msgid "Test"
-msgstr ""
-
-#: .\apps\models.py:37
-msgid "Time Tested At"
-msgstr ""
-
-#: .\apps\models.py:38
-msgid "screen 1"
-msgstr ""
-
-#: .\apps\models.py:39
-msgid "screen 2"
-msgstr ""
-
-#: .\apps\models.py:40
-msgid "video"
-msgstr ""
-
-#: .\apps\models.py:41
-msgid "Ui Hierarchy"
-msgstr ""
-
-#: .\apps\models.py:42
-msgid "Screen Changed"
-msgstr ""
-
-#: .\apps\models.py:48
-msgid "User"
-msgstr ""
-
-#: .\apps\models.py:49
-msgid "Email"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:5
-msgid "My Apps"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:14 .\apps\templates\apps\tests.html:14
-msgid "My"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:14
-msgid "Apps"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:17
-msgid "All"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:32 .\apps\templates\apps\tests.html:32
-msgid "Read more"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:50
-msgid "Prev"
-msgstr ""
-
-#: .\apps\templates\apps\apps.html:64
-msgid "Next"
-msgstr ""
-
-#: .\apps\templates\apps\home.html:5
+#: accounts/templates/registration/logged_out.html:28
+#: apps/templates/apps/home.html:8 templates/base.html:55
 msgid "Home"
-msgstr ""
+msgstr "Maison"
 
-#: .\apps\templates\apps\home.html:27
+#: accounts/templates/registration/login.html:12
+#: accounts/templates/registration/login.html:49
+#: accounts/templates/registration/register.html:31 templates/base.html:70
+msgid "Login"
+msgstr "Se connecter"
+
+#: accounts/templates/registration/login.html:28
+#: accounts/templates/registration/register.html:25
+msgid "Welcome"
+msgstr "Accueillir"
+
+#: accounts/templates/registration/login.html:29
+#: accounts/templates/registration/password_change_form.html:25
+msgid "let's get started!"
+msgstr "Commençons !"
+
+#: accounts/templates/registration/login.html:32
+msgid "Please use your credentials to login."
+msgstr "Veuillez utiliser vos identifiants pour vous connecter."
+
+#: accounts/templates/registration/login.html:34
+msgid "  If you are not a member, please"
+msgstr "Si vous n'êtes pas membre, veuillez"
+
+#: accounts/templates/registration/login.html:35
+#: accounts/templates/registration/password_reset_form.html:30
+msgid "register"
+msgstr "registre"
+
+#: accounts/templates/registration/login.html:46
+#: accounts/templates/registration/password_change_form.html:33
+msgid "Forget Password"
+msgstr "Mot de passe oublié"
+
+#: accounts/templates/registration/password_change_done.html:8
+msgid "Password Change Done"
+msgstr "Changement de mot de passe effectué"
+
+#: accounts/templates/registration/password_change_done.html:22
+msgid "Password Change done"
+msgstr "Changement de mot de passe effectué"
+
+#: accounts/templates/registration/password_change_done.html:25
+msgid "Your password has been changed successfully"
+msgstr "Votre mot de passe a été modifié avec succès"
+
+#: accounts/templates/registration/password_change_done.html:27
+#: accounts/templates/registration/password_reset_complete.html:29
+#: accounts/templates/registration/password_reset_done.html:29
+msgid "Back"
+msgstr "Dos"
+
+#: accounts/templates/registration/password_change_form.html:8
+msgid "Password Change"
+msgstr "Changement de mot de passe"
+
+#: accounts/templates/registration/password_change_form.html:24
+#: accounts/templates/registration/password_change_form.html:36
+msgid "Change Password"
+msgstr "Changer le mot de passe"
+
+#: accounts/templates/registration/password_reset_complete.html:8
+msgid "Password Change Complete"
+msgstr "Changement de mot de passe terminé"
+
+#: accounts/templates/registration/password_reset_complete.html:24
+msgid "Password Reset Completed"
+msgstr "Réinitialisation du mot de passe terminée"
+
+#: accounts/templates/registration/password_reset_complete.html:27
+msgid "Your password has been Reseted successfully"
+msgstr "Votre mot de passe a été réinitialisé avec succès"
+
+#: accounts/templates/registration/password_reset_confirm.html:8
+msgid "Password Reset Confirm"
+msgstr "Confirmer la réinitialisation du mot de passe"
+
+#: accounts/templates/registration/password_reset_confirm.html:24
+#: accounts/templates/registration/password_reset_form.html:8
+msgid "Password Reset"
+msgstr "Réinitialisation du mot de passe"
+
+#: accounts/templates/registration/password_reset_confirm.html:25
+#: accounts/templates/registration/password_reset_form.html:25
+#: accounts/templates/registration/register.html:26
+msgid "let's get started"
+msgstr "Commençons"
+
+#: accounts/templates/registration/password_reset_confirm.html:31
+#: accounts/templates/registration/password_reset_form.html:38
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: accounts/templates/registration/password_reset_done.html:8
+msgid "Password Reset Done"
+msgstr "Réinitialisation du mot de passe terminée"
+
+#: accounts/templates/registration/password_reset_done.html:24
+msgid "Password Reset Email Sent"
+msgstr "E-mail de réinitialisation du mot de passe envoyé"
+
+#: accounts/templates/registration/password_reset_done.html:27
+msgid "Please check your inbox"
+msgstr "Veuillez vérifier votre boîte de réception"
+
+#: accounts/templates/registration/password_reset_form.html:24
+msgid "Reset My Password"
+msgstr "Réinitialiser mon mot de passe"
+
+#: accounts/templates/registration/password_reset_form.html:29
+msgid " If you are not a member, please"
+msgstr "Si vous n'êtes pas membre, veuillez"
+
+#: accounts/templates/registration/register.html:9
+#: accounts/templates/registration/register.html:39
+msgid "Signup"
+msgstr "S'inscrire"
+
+#: accounts/templates/registration/register.html:30
+msgid "If you already have account"
+msgstr "Si vous avez déjà un compte"
+
+#: accounts/views.py:22
+msgid "User data updated"
+msgstr "Données utilisateur mises à jour"
+
+#: apps/context_processor.py:11
+msgid "You need to login first"
+msgstr "Vous devez d'abord vous connecter"
+
+#: apps/context_processor.py:20
+msgid "You have been subscribed in newsletter"
+msgstr "Vous êtes inscrit à la newsletter"
+
+#: apps/context_processor.py:22
+msgid "You Are Already subscribed!"
+msgstr "Vous êtes déjà abonné!"
+
+#: apps/forms.py:53
+msgid "Paltform Name"
+msgstr "Nom de la plateforme"
+
+#: apps/forms.py:53 apps/models.py:8 apps/templates/apps/apps.html:22
+#: apps/templates/apps/tests.html:19
+msgid "Android"
+msgstr "Androïde"
+
+#: apps/forms.py:54
+msgid "Automation Name"
+msgstr "Nom de l'automatisation"
+
+#: apps/forms.py:55
+msgid "Paltform Version"
+msgstr "Version de la plateforme"
+
+#: apps/forms.py:56
+msgid "Device Name"
+msgstr "Nom de l'appareil"
+
+#: apps/forms.py:57 templates/base.html:135
+msgid "Language"
+msgstr "Langue"
+
+#: apps/forms.py:58
+msgid "Locale"
+msgstr "Lieu"
+
+#: apps/forms.py:59
+msgid "First Button XPath"
+msgstr "Premier bouton XPath"
+
+#: apps/models.py:9 apps/templates/apps/apps.html:23
+#: apps/templates/apps/tests.html:20
+msgid "iOS"
+msgstr "iOS"
+
+#: apps/models.py:10 apps/templates/apps/apps.html:24
+#: apps/templates/apps/tests.html:21
+msgid "Other"
+msgstr "Autre"
+
+#: apps/models.py:22
+msgid "Name"
+msgstr "Nom"
+
+#: apps/models.py:23
+msgid "Description"
+msgstr "Description"
+
+#: apps/models.py:24
+msgid "Banner"
+msgstr "Bannière"
+
+#: apps/models.py:25
+msgid "Owner"
+msgstr "Propriétaire"
+
+#: apps/models.py:26
+msgid "APK File"
+msgstr "Fichier APK"
+
+#: apps/models.py:27
+msgid "Platforrm"
+msgstr "Plateforme"
+
+#: apps/models.py:28
+msgid "Time Updated At"
+msgstr "Heure de mise à jour à"
+
+#: apps/models.py:43
+msgid "Test Title"
+msgstr "Titre du test"
+
+#: apps/models.py:44
+msgid "Test"
+msgstr "Test"
+
+#: apps/models.py:45
+msgid "Time Tested At"
+msgstr "Testé dans le temps à"
+
+#: apps/models.py:46
+msgid "screen 1"
+msgstr "écran 1"
+
+#: apps/models.py:47
+msgid "screen 2"
+msgstr "écran 2"
+
+#: apps/models.py:48
+msgid "video"
+msgstr "vidéo"
+
+#: apps/models.py:49
+msgid "Ui Hierarchy"
+msgstr "Hiérarchie de l'interface utilisateur"
+
+#: apps/models.py:50
+msgid "Screen Changed"
+msgstr "Écran changé"
+
+#: apps/models.py:62
+msgid "User"
+msgstr "Utilisateur"
+
+#: apps/models.py:63
+msgid "Email"
+msgstr "E-mail"
+
+#: apps/templates/apps/app_detail.html:8
+msgid "App Details"
+msgstr "Détails de l'application"
+
+#: apps/templates/apps/app_detail.html:43
+msgid "Test Your App With Appium"
+msgstr "Testez votre application avec Appium"
+
+#: apps/templates/apps/app_detail.html:45
+msgid ""
+"“ Appium is an open-source project and ecosystem of related software, "
+"designed to facilitate UI automation of many app platforms, including mobile "
+"(iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, "
+"Windows), TV (Roku, tvOS, Android TV, Samsung), and more! ”"
+msgstr ""
+"« Appium est un projet open source et un écosystème de logiciels connexes, "
+"conçus pour faciliter l'automatisation de l'interface utilisateur de "
+"nombreuses plates-formes d'applications, notamment mobiles (iOS, Android, "
+"Tizen), navigateurs (Chrome, Firefox, Safari), ordinateurs de bureau (macOS, "
+"Windows), TV (Roku, tvOS, Android TV, Samsung), et plus encore ! »"
+
+#: apps/templates/apps/app_detail.html:56
+msgid "Run Appium Test"
+msgstr "Exécuter le test Appium"
+
+#: apps/templates/apps/app_detail.html:71
+msgid "Edit App"
+msgstr "Modifier l'application"
+
+#: apps/templates/apps/app_detail.html:77
+#: apps/templates/apps/test_detail.html:59
+msgid "Delete"
+msgstr "Supprimer"
+
+#: apps/templates/apps/apps.html:8
+msgid "My Apps"
+msgstr "Mes applications"
+
+#: apps/templates/apps/apps.html:17 apps/templates/apps/tests.html:14
+msgid "My"
+msgstr "Mon"
+
+#: apps/templates/apps/apps.html:17 templates/base.html:58
+msgid "Apps"
+msgstr "Applications"
+
+#: apps/templates/apps/apps.html:21 apps/templates/apps/tests.html:18
+msgid "All"
+msgstr "Tous"
+
+#: apps/templates/apps/apps.html:36 apps/templates/apps/tests.html:33
+msgid "Read more"
+msgstr "En savoir plus"
+
+#: apps/templates/apps/apps.html:49
+msgid "You don't upload any apps yet."
+msgstr "Vous n'avez pas encore téléchargé d'applications."
+
+#: apps/templates/apps/apps.html:59
+msgid "Prev"
+msgstr "Précédent"
+
+#: apps/templates/apps/apps.html:73
+msgid "Next"
+msgstr "Suivant"
+
+#: apps/templates/apps/apps.html:89
+msgid "Upload App"
+msgstr " Télécharger l'application"
+
+#: apps/templates/apps/apps.html:90
+msgid "Fill up form below"
+msgstr "Remplissez le formulaire ci-dessous"
+
+#: apps/templates/apps/apps.html:102
+msgid "Add"
+msgstr "Ajouter"
+
+#: apps/templates/apps/home.html:28
 msgid "Lead generation"
-msgstr ""
+msgstr "Génération de leads"
 
-#: .\apps\templates\apps\home.html:31
+#: apps/templates/apps/home.html:29
+msgid ""
+"\n"
+"              <span>mobile app testing platform </span>\n"
+"              "
+msgstr ""
+"\n"
+"<span> plateforme de test d'applications mobiles </span>"
+
+#: apps/templates/apps/home.html:35
 msgid ""
 "Software testing is critical in ensuring any application’s success in the "
 "digital world."
 msgstr ""
+"Les tests logiciels sont essentiels pour garantir le succès de toute "
+"application dans le monde numérique."
 
-#: .\apps\templates\apps\home.html:39
+#: apps/templates/apps/home.html:43
 msgid "Test Your Apps Now"
-msgstr ""
+msgstr "Testez vos applications maintenant"
 
-#: .\apps\templates\apps\home.html:239
+#: apps/templates/apps/home.html:112
+msgid "About us"
+msgstr "À propos de nous"
+
+#: apps/templates/apps/home.html:113
+msgid "Application with the best "
+msgstr "Application avec le meilleur"
+
+#: apps/templates/apps/home.html:113
+msgid " user"
+msgstr "utilisateur"
+
+#: apps/templates/apps/home.html:114
+msgid " interface convert"
+msgstr "conversion d'interface"
+
+#: apps/templates/apps/home.html:114
+msgid "visitor"
+msgstr "visiteur"
+
+#: apps/templates/apps/home.html:114
+msgid "into"
+msgstr "dans"
+
+#: apps/templates/apps/home.html:115
+msgid "leads"
+msgstr "conduit"
+
+#: apps/templates/apps/home.html:126
+msgid ""
+"Perform manual and automated app testing with Appix in various screen and "
+"screenless devices across mobile Emulators to collect over 100+ performance "
+"experience KPIs."
+msgstr ""
+"Effectuez des tests d'application manuels et automatisés avec Appix sur "
+"divers appareils avec écran et sans écran sur des émulateurs mobiles pour "
+"collecter plus de 100 KPI d'expérience de performance."
+
+#: apps/templates/apps/home.html:138
+msgid "START FOR FREE"
+msgstr "COMMENCEZ GRATUITEMENT"
+
+#: apps/templates/apps/home.html:153
+msgid "Quick & easy"
+msgstr "Rapide et facile"
+
+#: apps/templates/apps/home.html:154
+msgid "How it works in 3 steps"
+msgstr "Comment ça marche en 3 étapes"
+
+#: apps/templates/apps/home.html:164
+msgid "Create account"
+msgstr "Créer un compte"
+
+#: apps/templates/apps/home.html:165
+msgid "Sign up free"
+msgstr "Inscrivez-vous gratuitement"
+
+#: apps/templates/apps/home.html:178
+msgid "Upload app"
+msgstr "Télécharger l'application"
+
+#: apps/templates/apps/home.html:180
+msgid "Upload App. It will work for"
+msgstr "Téléchargez l'application. Cela fonctionnera pour"
+
+#: apps/templates/apps/home.html:180
+msgid " Android & iOS"
+msgstr "Android et iOS"
+
+#: apps/templates/apps/home.html:193
+msgid "Enjoy the test"
+msgstr "Profitez du test"
+
+#: apps/templates/apps/home.html:195
+msgid "Enjoy testing your apps"
+msgstr "Amusez-vous à tester vos applications"
+
+#: apps/templates/apps/home.html:195
+msgid "most amazing test experience"
+msgstr "l'expérience de test la plus étonnante"
+
+#: apps/templates/apps/home.html:204
 msgid "Get started now"
-msgstr ""
+msgstr "Commencez maintenant"
 
-#: .\apps\templates\apps\tests.html:5
+#: apps/templates/apps/test_detail.html:8
+msgid "Test Details"
+msgstr "Détails du test"
+
+#: apps/templates/apps/test_detail.html:53
+msgid "Edit"
+msgstr "Modifier"
+
+#: apps/templates/apps/tests.html:5
 msgid "My Tests"
-msgstr ""
+msgstr "Mes tests"
 
-#: .\apps\templates\apps\tests.html:14
+#: apps/templates/apps/tests.html:14
 msgid "Apps Test"
-msgstr ""
+msgstr "Test d'applications"
 
-#: .\project\settings.py:122
+#: apps/templates/apps/tests.html:46
+msgid "You don't perform any tests yet."
+msgstr "Vous n'effectuez aucun test pour le moment."
+
+#: project/settings.py:125
 msgid "Français"
-msgstr ""
+msgstr "Français"
 
-#: .\project\settings.py:123
+#: project/settings.py:126
 msgid "English"
+msgstr "Anglais"
+
+#: templates/auth_base.html:51
+msgid "Optimize End Users’ Digital Experiences"
+msgstr "Optimiser les expériences numériques des utilisateurs finaux"
+
+#: templates/base.html:61
+msgid "Tests"
+msgstr "Tests"
+
+#: templates/base.html:67
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/base.html:106
+msgid ""
+"\n"
+"                <h3>Subscribe newsletter</h3>\n"
+"                <p>Be the first to recieve all latest post in your inbox</"
+"p>\n"
+"                "
 msgstr ""
+"\n"
+"<h3>Abonnez-vous à la newsletter</h3>\n"
+"<p>Soyez le premier à recevoir tous les derniers articles dans votre boîte "
+"de réception</p>"

@@ -13,8 +13,9 @@
           <div class="section_title" data-aos="fade" data-aos-duration="1500">
             <h2> {% trans 'My' %}  <span>{% trans 'Apps Test' %}</span></h2>
           </div>
+          {% if apptest_list %}
           <ul class="filter_tags" data-aos="fade-up" data-aos-duration="1500">
-            <li><a href="#" class="active">All</a></li>
+            <li><a href="#" class="active">{% trans 'All' %}</a></li>
             <li><a href="#">{% trans 'Android' %}</a></li>
             <li><a href="#">{% trans 'iOS' %}</a></li>
             <li><a href="#">{% trans 'Other' %}</a></li>
@@ -22,23 +23,30 @@
           {% for app in apptest_list %}
           <div class="blog_listings">
             <div class="listing_block" data-aos="fade-up" data-aos-duration="1500">
-              <a href="" class="img" width="320" height="350">
-                <img src='{{app.logo.url}}'  alt="image">
+              <a href="{{app.get_absolute_url}}" class="img" width="320" height="350">
+                <img src='{{app.application.logo.url}}'  alt="image">
               </a>
               <div class="blog_text">
-                <span class="tag">{{app.platform}}</span>
-                <h2><a href="#">{{app.name}}</a></h2>
-                <h6>{{app.description|truncatewords:6}}</h6>
-                <a href="#">{% trans 'Read more' %} <i class="icofont-arrow-right"></i></a>
+                <span class="tag">{{app.application.platform}}</span>
+                <h2><a href="{{app.get_absolute_url}}">{{app.test_title}}</a></h2>
+                <h6>{{app.application.description|truncatewords:6}}</h6>
+                <a href="{{app.get_absolute_url}}">{% trans 'Read more' %} <i class="icofont-arrow-right"></i></a>
               </div>
               <div class="authore_info">
                 <ul class="blog_info">
-                  <li>{{app.updated_at}}</li>
+                  <li>{{app.tested_at}}</li>
                 </ul>
               </div>
             </div>
           </div>
           {% endfor %}
+          {% else %}
+          <div class="listing_block" data-aos="fade-up" data-aos-duration="1500">
+            <br>
+            <h5>{% trans "You don't perform any tests yet." %}</h5>
+          </div>
+          {% endif %}
+        </div>
 
           {% if is_paginated %}
           <div class="pagination_block" data-aos="fade-in" data-aos-duration="1500">

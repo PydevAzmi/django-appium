@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 {% load i18n %}
 {% block title %}
-    {% trans "My Apps" %}
+  {% trans "My Apps" %}
 {% endblock title %}
 
 
@@ -13,6 +16,7 @@
           <div class="section_title" data-aos="fade" data-aos-duration="1500">
             <h2>{% trans "My" %} <span>{% trans "Apps" %}</span></h2>
           </div>
+          {% if application_list %}
           <ul class="filter_tags" data-aos="fade-up" data-aos-duration="1500">
             <li><a href="#" class="active">{% trans "All" %}</a></li>
             <li><a href="#">{% trans "Android" %}</a></li>
@@ -22,14 +26,14 @@
           <div class="blog_listings">
             {% for app in application_list %}
             <div class="listing_block" data-aos="fade-up" data-aos-duration="1500">
-              <a href="" class="img">
+              <a href="{{app.get_absolute_url}}" class="img">
                 <img src='{{app.logo.url}}' alt="image">
               </a>
               <div class="blog_text">
                 <span class="tag">{{app.platform}}</span>
-                <h2><a href="#">{{app.name}}</a></h2>
+                <h2><a href="{{app.get_absolute_url}}">{{app.name}}</a></h2>
                 <h6>{{app.description|truncatewords:20}}</h6>
-                <a href="#">{% trans "Read more" %} <i class="icofont-arrow-right"></i></a>
+                <a href="{{app.get_absolute_url}}">{% trans "Read more" %} <i class="icofont-arrow-right"></i></a>
               </div>
               <div class="authore_info">
                 <ul class="blog_info">
@@ -39,8 +43,13 @@
             </div>
             {% endfor %}
           </div>
-
-        </div>
+          {% else %}
+          <div class="listing_block" data-aos="fade-up" data-aos-duration="1500">
+            <br>
+            <h5>{% trans "You don't upload any apps yet." %}</h5>
+          </div>
+          {% endif %}
+          </div>
 
 
           {% if is_paginated %}
@@ -68,8 +77,36 @@
           <!-- Pagination -->
           
         </div>
-      </section>
-      <!-- Recent Articles Section End -->
+    </section>
+    <!-- Recent Articles Section End -->
+
+        <!-- Contact Form Section Start -->
+        <section class="contact_form white_text row_am" data-aos="fade-in" data-aos-duration="1500">
+          <div class="contact_inner">
+            <div class="container">
+              <div class="dotes_blue"><img src="{% static 'images/blue_dotes.png' %}" alt="image"></div>
+              <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                <span class="title_badge">{% trans 'Upload App' %}</span>
+                <p>{% trans 'Fill up form below' %}</p>
+              </div>
+              <form class="form-group" data-aos="fade-up" data-aos-duration="1500" action="{% url 'create_app' %}" method="post" enctype="multipart/form-data">
+                <div class="row">
+                  {% csrf_token %}
+                  {% for field in  form %}
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        {% bootstrap_field field label_class="text-light"%}
+                    </div>
+                </div>
+                  {% endfor %}
+                  {% trans "Add" as Add_text %}
+                  {% bootstrap_button type="submit" class="btn btn-lg btn-primary" content=Add_text %}
+                </div>
+            </form>	
+            </div>
+          </div>
+        </section>
+        <!-- Contact Form Section End -->
   
 {% endblock body %}
     

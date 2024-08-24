@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+{% block title %}
+  {% trans "Test Details" %}
+{% endblock title %}
+
+{% block body %}
+<div class="page_wrapper">
+
+    <!-- Blog Detail Section Start -->
+    <section class="blog_detail_section">
+      <div class="container container-sm">
+        <div class="blog_head">
+          <div class="tags_info">
+            <span class="tag">{{test.application.platform}}</span>
+            <ul class="blog_info ml-auto">
+              <li>{{test.tested_at}}</li>
+            </ul>
+          </div>
+          <h1>{{test.test_title}}</h1>
+        </div>
+        <div class="blog_body">
+          <div class="img" data-aos="fade-in" data-aos-duration="1500">
+            <img src="{{test.application.logo.url}}" alt="image">
+          </div>
+          <p>{{test.application.description}}</p>
+
+            <!-- Spin Diveder Start -->
+            <div class="spinBlock">
+                <span class="star"><img src="{% static 'images/smallStar.png' %}" alt="image"></span>
+                <div >
+                </div>
+                <span class="star"><img src="{% static 'images/smallStar.png' %}" alt="image"></span>
+            </div>
+            <br>
+            <!-- Spin Diveder End -->
+
+
+    </div>
+
+    
+        <!-- Contact Form Section Start -->
+        <section class="contact_form white_text row_am" data-aos="fade-in" data-aos-duration="1500">
+            <div class="contact_inner">
+              <div class="container">
+                <div class="dotes_blue"><img src="{% static 'images/blue_dotes.png' %}" alt="image"></div>
+                <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                  <div class="row">
+                        <span class="col-lg-1">{% trans 'Edit' %}</span>
+                        <div class="col-lg-2 ml-auto">
+                          <form method="post" action="delete/">
+                            {% csrf_token %}
+                              <button class="btn btn-outline-danger icofont-bin"
+                              data-bs-delay="0"
+                              data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Delete' %}" type="submit">
+                            
+                              </button>
+                          </form>
+                        </div>
+                    </div>
+              </div>
+                <form class="form-group" data-aos="fade-up" data-aos-duration="1500" action="{% url 'update_test' test.pk %}" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                    {% csrf_token %}
+                    {% for field in  form %}
+                      <div class="form-group">
+                          {% bootstrap_field field label_class="text-light"%}
+                          {% trans "Save" as Add_text %}
+                          {% bootstrap_button type="submit" class="btn btn-lg btn-primary" content=Add_text %}
+                      </div>
+                    {% endfor %}
+
+                  </div>
+              </form>	
+              </div>
+            </div>
+          </section>
+          <!-- Contact Form Section End -->
+          
+            
+        </div>
+        
+    </section>
+    <!-- Blog Detail Section End -->
+</div>
+  <!-- Page-wrapper-End -->
+
+{% endblock body %}

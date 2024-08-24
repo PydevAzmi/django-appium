@@ -202,11 +202,30 @@ h3 {
     z-index: 2;
 }
 
-.puprple_btn:hover {
+.puprple_btn_warn {
     color: var(--text-white);
+    background-color: var(--primery);
+    font-size: 16px;
+    padding: 9px 30px;
+    border-radius: 25px;
+    margin-left: 20px;
+    position: relative;
+    transform: translate3d(-3px, -4px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: .4s all;
+    z-index: 2;
+}
+
+.puprple_btn:hover {
+    color: var(--primery);
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 }
 
+
+.puprple_btn_warn:hover {
+    color: red;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
 .btn_block {
     position: relative;
     display: inline-block;

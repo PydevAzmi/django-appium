@@ -90,12 +90,14 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('MYSQL_DATABASE'),
+        'USER': env('MYSQL_USER'),
+        'PASSWORD': env('MYSQL_PASSWORD'),
+        'HOST': 'db',
     }
+
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -134,9 +136,12 @@ USE_TZ = True
 
 USE_L10N = True
 
-LOCALE_PATH = [
-    os.path.join(BASE_DIR, 'locale')
-]
+
+PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
+LOCALE_PATHS = (
+    os.path.join(PROJECT_PATH, "locale"),
+)
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
