@@ -11,7 +11,7 @@ def subscribe(request):
             messages.warning(request, _('You need to login first'))
         else :  
             subscribe_form = SubscribeForm(request.POST)
-            if subscribe_form.is_valid():
+            if subscribe_form.is_valid() and not request.user.is_anonymous:
                 if not SubscripedEmail.objects.filter(user=request.user).exists():
                     subscribe = SubscripedEmail(
                         email = subscribe_form.cleaned_data["email"],
